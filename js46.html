@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array Reduce</title>
 </head>
 <body>
     <script type="text/javascript">
-        cars=new Array("Saab","Volvo","BMW")
-        for(i=0;i<3;i++)
-    {
-        console.log(i)
-    }
+        x=[47,11,42,13]
+        sum=x.reduce((p,q)=>p+q)
+        console.log(sum)
     </script>
 </body>
 </html>

@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array Filter</title>
 </head>
 <body>
     <script type="text/javascript">
-        cars=new Array("Saab","Volvo","BMW")
-        for(i=0;i<3;i++)
-    {
-        console.log(i)
-    }
+        x=[1,4,11,10,5]
+        y=x.filter(n=>n%2===0)
+        console.log(y)
     </script>
 </body>
 </html>
