@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array using keys and values</title>
+</head>
+<body>
+   <script type="text/javascript">
+    let n = ["Pen", "Book", "Eraser", "Scale", "Bag"];
+    let x = Array.from(n.keys()); // Convert keys iterator to an array
+    let y = Array.from(n.values()); // Convert values iterator to an array
+    let z = Array.from(n.entries()); // Convert entries iterator to an array
+
+    console.log(x); // Log keys
+    console.log(y); // Log values
+    console.log(z); // Log entries
+   </script> 
+</body>
+</html>
