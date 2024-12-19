@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom2</title>
+    <style type="text/css">
+        body {
+            background-color: darksalmon;
+        }
+        table, tr, td {
+            border-collapse: collapse;
+            border-style: none;
+        }
+        .d1 {
+            background-color: rosybrown;
+            width: 200px;
+            height: 100px;
+            margin-left: 600px;
+            margin-top: 250px;
+            color: aqua;
+            box-shadow: 4px 4px 4px #000000;
+            padding: 20px 20px 20px 20px;
+        }
+        .bts1 {
+            border-radius: 5px;
+            background-color: aquamarine;
+        }
+        .tbs1 {
+            border-radius: 5px;
+            background-color: cadetblue;
+            color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <form name="fm1">
+        <div class="d1">
+            <table>
+                <tr>
+                    <td>
+                        <label for="aval">PRINCIPAL</label>
+                        <input type="text" id="v1" name="aval" placeholder="a value" required class="tbs1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="bval">TIME</label>
+                        <input type="text" id="v2" name="bval" placeholder="b value" required class="tbs1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="cval">RATE OF INTEREST</label>
+                        <input type="text" id="v3" name="cval" placeholder="c value" required class="tbs1">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="position: relative; left: 20px;">
+                        <input type="button" value="SI" class="bts1" onClick="sic()">
+                        <input type="button" value="CI" class="bts1" onClick="cic()">
+                        <input type="button" value="Reset" class="bts1" onClick="reset()">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+<script type="text/javascript">
+    function sic() {
+        const p = parseFloat(document.getElementById("v1").value);
+        const t = parseFloat(document.getElementById("v2").value);
+        const r = parseFloat(document.getElementById("v3").value);
+        const si = (p * t * r) / 100;
+        alert(si);
+    }
+
+    function cic() {
+        const p = parseFloat(document.getElementById("v1").value);
+        const t = parseFloat(document.getElementById("v2").value);
+        const r = parseFloat(document.getElementById("v3").value);
+        const ci = p * Math.pow(1 + r / 100, t);
+        alert(ci);
+    }
+</script>
+</html>
