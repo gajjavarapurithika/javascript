@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest of 3 Numbers</title>
+    <style>
+        .d1 {
+            margin-left: 600px;
+            margin-top: 225px;
+            background-color: coral;
+            width: 250px;
+            padding: 10px;
+            box-shadow: 2px 2px 2px #000000;
+            color: lightblue;
+        }
+        body {
+            background-color: aquamarine;
+        }
+        .t1 {
+            border-radius: 5px;
+        }
+        .img1 {
+            margin-left: 600px;
+            width: 400px;
+            height: 400px;
+        }
+        .bts1 {
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <img class="img1" src="file://C:/internship/html/Images/1.jpeg" alt="No image available">
+    <form name="fm1">
+        <div class="d1">
+            <table>
+                <tr>
+                    <td>
+                        <label for="v1">A</label>
+                    </td>
+                    <td>
+                       <input type="text" id="v1" placeholder="Enter value A" required class="t1"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="v2">B</label>
+                    </td>
+                    <td>
+                        <input type="text" id="v2" placeholder="Enter value B" required class="t1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="v3">C</label>
+                    </td>
+                    <td>
+                        <input type="text" id="v3" placeholder="Enter value C" required class="t1">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" value="Check Big" onclick="cbig()">
+                    </td>
+                    <td>
+                        <input type="reset" value="Clear" onclick=reset()" style="margin-left: 20px;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <script>
+        function cbig() {
+            const a = parseInt(document.getElementById("v1").value);
+            const b = parseInt(document.getElementById("v2").value);
+            const c = parseInt(document.getElementById("v3").value);
+            if (a > b && a > c) 
+            {
+                alert("a is big");
+            } 
+            else if (b > a && b > c) 
+            {
+                alert("B is big");
+            }
+            else 
+            {
+                alert("C is big");
+            } 
+        }
+    </script>
+</body>
+</html>
