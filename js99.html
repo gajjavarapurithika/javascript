@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Box</title>
+</head>
+<body>
+    <form>
+        <label for="mi">Choose Values:</label>
+        <select id="mi" multiple onchange="dsv()">
+        <option value="pen">Pen</option>
+        <option value="pencil">Pencil</option>
+        <option value="book">Book</option>
+        <option value="eraser">Eraser</option>
+        <option value="bag">Bag</option>
+        </select>
+    </form>
+    <p id="ps">Selected items will be displayed here</p>
+    <script type="text/javascript">
+        function dsv()
+        {
+            x=[];
+            y=document.getElementById("mi");
+            for(i=0;i<y.options.length;i++)
+        {
+            if(y.options[i].selected)
+        {
+            x.push(y.options[i].value);
+        }
+        }
+        document.getElementById("ps").innerText="Selected values:"+x.join(",");
+    }
+    </script>
+</body>
+</html>

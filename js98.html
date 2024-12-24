@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo Box</title>
+</head>
+<body>
+    <label>ITEMS</label>
+    <select id="mysp" onchange="mys()">
+        <option value="pen">Pen</option>
+        <option value="pencil">Pencil</option>
+        <option value="book">Book</option>
+        <option value="eraser">Eraser</option>
+        <option value="bag">Bag</option>
+    </select>
+    <script type="text/javascript">
+        function mys()
+        {
+            x=document.getElementById("mysp").value;
+            document.getElementById("ps").innerText=x
+        }
+    </script>
+    <br><br>
+    <table>
+        <tr>
+            <td>Your Selection=</td>
+            <td><p id="ps"></p></td>
+        </tr>
+    </table>
+</body>
+</html>
