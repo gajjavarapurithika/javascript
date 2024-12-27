@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate American Express Credit card</title>
+</head>
+<body>
+    <h2>Input Credit Card no. [Starting with 34 or 37, length 15 digits (American Express)] and submit</h2>
+    <form name="fm1" action="#" onsubmit="return cardnumber(document.fm1.text1)">
+        <input type="text" name="text1" autofocus>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+    <script type="text/javascript">
+        function cardnumber(inputText) {
+            // Regular expression to validate American Express card number (15 digits, starting with 34 or 37)
+            var cardno = /^(?:3[47][0-9]{13})$/;
+            if (inputText.value.match(cardno)) {
+                alert("Your card is valid");
+                return true;
+            } else {
+                alert("Not a valid American Express credit card number");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
