@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Id validation</title>
+</head>
+<body>
+   <form name="fm1">
+    <label for="fname">Email:</label>
+    <input type="text" name="fname">
+    <input type="submit" value="submit" onclick="validate(document.fm1.fname)">
+   </form> 
+</body>
+<script type="text/javascript">
+    function validate(inputxt)
+    {
+        mailFormat=/^\w+([\.-]?\wt)*@\wt(\.-?\w+)*(\.\w{2,3})+$/;
+        if(inputxt.value.match(mailFormat))
+        {
+            alert("Valid email address");
+            document.fm1.fname.focus();
+            return true;
+        }
+        else
+        {
+            alert("You have entered  invalid email address");
+            document.fm1.fname.focus();
+            return false;
+        }
+    }
+</script>
+</html>
