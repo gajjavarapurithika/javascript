@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks4</title>
+</head>
+<body>
+    <h1>Javascript Functions</h1>
+    <h2>Set Timeout()with a callback</h2>
+    <p>Wait for 3 seconds(3000 milliseconds)for this page to change</p>
+    <h1 id="demo"></h1>
+    <script type="text/javascript">
+        setTimeout(myFunction,3000);
+        function myFunction()
+        {
+            document.getElementById("demo").innerHTML="Welcome to Javascript";
+        }
+    </script>
+</body>
+</html>
