@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Promise object</h1>
+    <h2>The then() method</h2>
+    <p id="demo"></p>
+    <script type="text/javascript">
+        function myDisplayer(some)
+        {
+            document.getElementById("demo").innerHTML = some;
+        }
+        
+        let myPromise = new Promise(function(myResolve, myReject)
+        {
+            let req = new XMLHttpRequest();
+            req.open("GET", "mycar.html");
+            req.onload = function()
+            {
+                if (req.status == 200)
+                {
+                    myResolve(req.responseText); // Fixed typo: 'reg' to 'req' and used 'responseText'
+                }
+                else
+                {
+                    myReject("File not Found");
+                }
+            };
+            req.send(); // Fixed typo: 'reg' to 'req'
+        });
+
+        myPromise.then(
+            function(value) {
+                myDisplayer(value);
+            },
+            function(error) {
+                myDisplayer(error);
+            }
+        );
+    </script>
+</body>
+</html>
