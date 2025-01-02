@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function asynchronous_operational_method() 
+        {
+            let first_promise = new Promise((resolve, reject) => resolve("Hello World"));
+            
+            let second_promise = new Promise((resolve, reject) => 
+            {
+                setTimeout(() => 
+                {
+                    resolve("Greeks for Greeks");
+                }, 1000);
+            });
+            let combined_promise=Promise.all([first_promise, second_promise]);
+            return combined_promise;
+        }
+
+        async function display() 
+        {
+            let data = await asynchronous_operational_method();
+            console.log(data); 
+        }
+        display();
+    </script>
+</body>
+</html>
